@@ -1,0 +1,1201 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background: #f8f3eb;
+
+  color: #241b22;
+
+  font-family: "DM Sans", sans-serif;
+
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --wine: #601d49;
+  --pink: #bd5579;
+  --soft-pink: #ea9d9d;
+  --cream: #ffebb8;
+
+  --paper: #f8f3eb;
+  --white: #fffaf4;
+
+  --ink: #241b22;
+  --muted: #766d72;
+
+  --border: rgba(96,29,73,0.16);
+
+  --serif: "Playfair Display", serif;
+  --sans: "DM Sans", sans-serif;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.signup-page {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   DECORATION
+========================================================= */
+
+.signup-decoration {
+  position: fixed;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 600px;
+  height: 600px;
+
+  right: -400px;
+  top: -350px;
+
+  border: 1px solid rgba(189,85,121,0.18);
+}
+
+.decoration-two {
+  width: 400px;
+  height: 400px;
+
+  left: -300px;
+  bottom: -300px;
+
+  border: 1px solid rgba(96,29,73,0.12);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.signup-brand {
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 45px 5vw;
+
+  background: var(--wine);
+
+  color: white;
+
+  overflow: hidden;
+}
+
+.signup-brand::before {
+  content: "";
+
+  position: absolute;
+
+  width: 750px;
+  height: 750px;
+
+  right: -480px;
+  bottom: -480px;
+
+  border: 1px solid rgba(255,235,184,0.13);
+
+  border-radius: 50%;
+}
+
+.signup-brand::after {
+  content: "";
+
+  position: absolute;
+
+  width: 480px;
+  height: 480px;
+
+  right: -300px;
+  bottom: -300px;
+
+  border: 1px solid rgba(234,157,157,0.12);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand-logo {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  width: fit-content;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--cream);
+
+  color: var(--wine);
+
+  font-family: var(--serif);
+
+  font-size: 21px;
+}
+
+.brand-name {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+========================================================= */
+
+.brand-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
+
+  margin: auto 0;
+}
+
+.brand-eyebrow {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: var(--soft-pink);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.brand-content h1 {
+  font-family: var(--serif);
+
+  font-size: clamp(55px, 7vw, 105px);
+
+  font-weight: 500;
+
+  line-height: 0.87;
+
+  letter-spacing: -0.055em;
+}
+
+.brand-content h1 em {
+  color: var(--cream);
+
+  font-style: italic;
+}
+
+.brand-content p {
+  max-width: 430px;
+
+  margin-top: 38px;
+
+  color: rgba(255,255,255,0.62);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BRAND FOOTER
+========================================================= */
+
+.brand-footer {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255,255,255,0.15);
+
+  color: rgba(255,255,255,0.42);
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.signup-panel {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 60px 6vw;
+
+  background: var(--paper);
+}
+
+.signup-container {
+  width: 100%;
+
+  max-width: 570px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.signup-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+.back-home-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid rgba(96, 29, 73, 0.22);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--wine);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.back-home-chip:hover {
+  background: var(--wine);
+  color: #ffffff;
+  border-color: var(--wine);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(96, 29, 73, 0.18);
+}
+
+.back-home-chip svg {
+  stroke: currentColor;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.back-home-chip:hover svg {
+  transform: translateX(-3px);
+}
+
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.auth-logo:hover {
+  transform: scale(1.06);
+  opacity: 0.95;
+}
+
+.auth-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(85%) saturate(2256%) hue-rotate(300deg) brightness(75%) contrast(95%) !important;
+}
+
+.signup-brand img[src*="logo"] {
+  filter: brightness(0) invert(1) !important;
+}
+
+.signup-top p {
+  color: var(--muted);
+  font-size: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.signup-top p a {
+  color: var(--wine);
+
+  font-weight: 700;
+
+  margin-left: 5px;
+
+  border-bottom: 1px solid var(--pink);
+
+  padding-bottom: 3px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.signup-heading {
+  margin-bottom: 42px;
+}
+
+.signup-heading > span {
+  color: var(--pink);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.signup-heading h2 {
+  margin-top: 18px;
+
+  color: var(--wine);
+
+  font-family: var(--serif);
+
+  font-size: clamp(55px, 6vw, 82px);
+
+  font-weight: 500;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.055em;
+}
+
+.signup-heading h2 em {
+  color: var(--pink);
+
+  font-style: italic;
+}
+
+.signup-heading p {
+  margin-top: 22px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.signup-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.form-field {
+  position: relative;
+  z-index: 1;
+}
+
+.form-field:has(.custom-select.open),
+.form-field.is-open {
+  z-index: 100;
+}
+
+.form-field label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: var(--wine);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.form-field > input,
+.password-wrapper input {
+  width: 100%;
+
+  height: 52px;
+
+  padding: 0 2px;
+
+  border: 0;
+
+  border-bottom: 1px solid rgba(96,29,73,0.25);
+
+  outline: none;
+
+  border-radius: 0;
+
+  background: transparent !important;
+
+  color: var(--ink);
+
+  font-size: 14px;
+
+  caret-color: var(--pink);
+
+  transition:
+    border-color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.form-field > input::placeholder,
+.password-wrapper input::placeholder {
+  color: #aaa0a5;
+}
+
+.form-field > input:focus,
+.password-wrapper input:focus {
+  border-bottom-color: var(--pink);
+
+  padding-left: 7px;
+}
+
+
+/* =========================================================
+   REMOVE AUTOFILL BLUE
+========================================================= */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--ink) !important;
+
+  -webkit-box-shadow:
+    0 0 0 1000px var(--paper) inset !important;
+
+  box-shadow:
+    0 0 0 1000px var(--paper) inset !important;
+
+  background-color: var(--paper) !important;
+
+  transition:
+    background-color 9999s ease-in-out 0s;
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 50px;
+}
+
+
+/* =========================================================
+   REMOVE EDGE REVEAL
+========================================================= */
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  position: absolute;
+  right: 0;
+}
+
+
+/* =========================================================
+   EYE
+========================================================= */
+
+.password-toggle {
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--wine);
+
+  cursor: pointer;
+}
+
+.eye-icon {
+  position: absolute;
+
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.5;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.eye-open {
+  opacity: 1;
+}
+
+.eye-closed {
+  opacity: 0;
+
+  transform: scale(0.8);
+}
+
+.password-toggle.is-visible .eye-open {
+  opacity: 0;
+
+  transform: scale(0.8);
+}
+
+.password-toggle.is-visible .eye-closed {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+.password-toggle:hover {
+  color: var(--pink);
+}
+
+
+/* =========================================================
+   CUSTOM DROPDOWN
+========================================================= */
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select.open {
+  z-index: 100;
+}
+
+.custom-select-trigger {
+  width: 100%;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 2px;
+
+  border: 0;
+
+  border-bottom: 1px solid rgba(96,29,73,0.25);
+
+  background: transparent;
+
+  color: var(--muted);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease;
+}
+
+.custom-select-trigger:hover {
+  border-bottom-color: var(--pink);
+}
+
+.selected-placeholder {
+  color: #aaa0a5;
+}
+
+.selected-value {
+  color: var(--ink);
+}
+
+.select-arrow {
+  color: var(--pink);
+
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.custom-select.open .select-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
+
+.custom-select-menu {
+  position: absolute;
+
+  z-index: 999;
+
+  left: 0;
+  right: 0;
+
+  top: calc(100% + 8px);
+
+  padding: 7px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  box-shadow:
+    0 20px 50px rgba(36,27,34,0.12);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(-8px)
+    scale(0.98);
+
+  transform-origin: top;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+}
+
+.custom-select.open .custom-select-menu {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* =========================================================
+   OPTION
+========================================================= */
+
+.role-option {
+  display: grid;
+
+  grid-template-columns: 38px 1fr auto;
+
+  grid-template-rows: auto auto;
+
+  column-gap: 10px;
+
+  padding: 15px;
+
+  cursor: pointer;
+
+  border-bottom: 1px solid rgba(96,29,73,0.08);
+
+  transition:
+    background 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.role-option:last-child {
+  border-bottom: 0;
+}
+
+.role-option:hover,
+.role-option:focus {
+  outline: none;
+
+  background: #f3e9e1;
+
+  padding-left: 20px;
+}
+
+.role-option.selected {
+  background: #f3e9e1;
+}
+
+.role-number {
+  grid-row: 1 / 3;
+
+  color: var(--pink);
+
+  font-size: 9px;
+
+  padding-top: 3px;
+}
+
+.role-name {
+  color: var(--wine);
+
+  font-family: var(--serif);
+
+  font-size: 21px;
+}
+
+.role-description {
+  color: var(--muted);
+
+  font-size: 9px;
+
+  align-self: end;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.field-error {
+  display: block;
+
+  height: 0;
+
+  overflow: hidden;
+
+  margin-top: 0;
+
+  color: #a23b55;
+
+  font-size: 9px;
+
+  opacity: 0;
+
+  transition:
+    height 0.25s ease,
+    margin-top 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.field-error.show {
+  height: auto;
+
+  margin-top: 7px;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SIGNUP BUTTON
+========================================================= */
+
+.signup-button {
+  width: 100%;
+
+  height: 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 21px;
+
+  border: 0;
+
+  background: var(--wine);
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.signup-button strong {
+  font-size: 18px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.signup-button:hover {
+  background: var(--pink);
+
+  transform: translateY(-2px);
+}
+
+.signup-button:hover strong {
+  transform:
+    translate(3px, -3px);
+}
+
+.signup-button.success {
+  background: #315f46;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.signup-message {
+  min-height: 0;
+
+  color: #315f46;
+
+  font-size: 10px;
+
+  text-align: center;
+
+  opacity: 0;
+}
+
+.signup-message.show {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   LOGIN PROMPT
+========================================================= */
+
+.login-prompt {
+  margin-top: 32px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid var(--border);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.login-prompt span {
+  color: #9a9195;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.login-prompt a {
+  color: var(--wine);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.login-prompt strong {
+  color: var(--pink);
+
+  margin-left: 5px;
+
+  font-size: 14px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .signup-page {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-brand {
+    display: none !important;
+  }
+
+  .signup-panel {
+    min-height: 100vh;
+
+    padding:
+      50px 6vw
+      80px;
+  }
+
+  .signup-container {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .signup-brand {
+    display: none !important;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+
+    font-size: 18px;
+  }
+
+  .brand-name {
+    font-size: 12px;
+  }
+
+  .brand-content {
+    margin-top: 70px;
+  }
+
+  .brand-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 8px;
+  }
+
+  .brand-content h1 {
+    font-size: clamp(47px, 14vw, 70px);
+  }
+
+  .brand-content p {
+    margin-top: 25px;
+
+    font-size: 12px;
+  }
+
+  .brand-footer {
+    font-size: 7px;
+  }
+
+
+  /* PANEL */
+
+  .signup-panel {
+    padding:
+      55px 6vw
+      70px;
+  }
+
+  .signup-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+
+  .signup-top .back-home-chip {
+    display: inline-flex !important;
+    align-self: flex-start;
+    padding: 6px 14px;
+    font-size: 10px;
+  }
+
+  .signup-top .auth-logo {
+    display: inline-flex !important;
+    align-self: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .auth-logo-img {
+    height: 42px;
+  }
+
+  .signup-top p {
+    display: none !important;
+  }
+
+  .signup-heading {
+    margin-bottom: 38px;
+  }
+
+  .signup-heading h2 {
+    font-size: clamp(52px, 15vw, 72px);
+  }
+
+  .signup-form {
+    gap: 24px;
+  }
+
+  .login-prompt {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .brand-content h1 {
+    font-size: 45px;
+  }
+
+  .signup-heading h2 {
+    font-size: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+
+}

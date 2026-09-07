@@ -1,0 +1,1782 @@
+/* =========================================================
+   INDEX.CSS
+   HOME PAGE ONLY
+   ========================================================= */
+
+/* =========================================================
+   01 — HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--color-paper);
+}
+
+.hero-noise {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.78fr);
+    align-items: center;
+    gap: clamp(40px, 7vw, 120px);
+    width: min(calc(100% - (var(--gutter) * 2)), var(--container));
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 5;
+    max-width: 780px;
+}
+
+.hero-eyebrow {
+    margin-bottom: 32px;
+}
+
+.hero-title {
+    max-width: 780px;
+    font-size: clamp(54px, 6.8vw, 110px);
+    color: var(--color-primary);
+    line-height: 1.05;
+}
+
+.hero-title-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.15em;
+    margin-bottom: -0.05em;
+}
+
+.hero-title-line span {
+    display: inline-block;
+    padding-bottom: 0.12em;
+}
+
+.hero-title .accent-word {
+    color: var(--color-secondary);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 510px;
+    margin-top: 34px;
+    color: var(--color-muted);
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 38px;
+    margin-bottom: 42px;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 42px;
+}
+
+.hero-counter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+}
+
+.hero-counter-line {
+    width: 100px;
+    height: 1px;
+    overflow: hidden;
+    background: rgba(96, 29, 73, 0.15);
+}
+
+.hero-counter-progress {
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: var(--color-secondary);
+}
+
+.hero-image-stage {
+    position: relative;
+    height: min(72vh, 760px);
+    min-height: 520px;
+}
+
+.hero-image-frame {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 0 0 0 42%;
+    background: var(--color-soft);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.06);
+}
+
+.hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(96, 29, 73, 0.18),
+            transparent 55%
+        );
+    pointer-events: none;
+}
+
+.hero-image-index {
+    position: absolute;
+    right: 26px;
+    bottom: 26px;
+    z-index: 4;
+    color: var(--color-white);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+}
+
+.hero-floating-note {
+    position: absolute;
+    left: -40px;
+    bottom: 12%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 18px;
+    background: var(--color-highlight);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transform: rotate(-4deg);
+}
+
+.hero-floating-note::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-secondary);
+}
+
+.hero-grid-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+.hero-grid-lines::before,
+.hero-grid-lines::after {
+    content: "";
+    position: absolute;
+    background: var(--color-line);
+}
+
+.hero-grid-lines::before {
+    top: 0;
+    right: 27%;
+    width: 1px;
+    height: 100%;
+}
+
+.hero-grid-lines::after {
+    left: 0;
+    top: 30%;
+    width: 100%;
+    height: 1px;
+}
+
+.hero-progress {
+    position: absolute;
+    right: var(--gutter);
+    bottom: 34px;
+    z-index: 8;
+    display: flex;
+    gap: 7px;
+}
+
+.hero-progress button {
+    width: 34px;
+    height: 3px;
+    padding: 0;
+    background: rgba(96, 29, 73, 0.18);
+}
+
+.hero-progress button.active {
+    background: var(--color-primary);
+}
+
+/* =========================================================
+   02 — TAX LANDSCAPE
+   ========================================================= */
+
+.tax-landscape {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.landscape-inner {
+    position: relative;
+    z-index: 2;
+    width: min(calc(100% - (var(--gutter) * 2)), 1250px);
+    text-align: center;
+}
+
+.landscape-small {
+    margin-bottom: 40px;
+    color: var(--color-highlight);
+}
+
+.landscape-title {
+    font-size: clamp(58px, 10vw, 150px);
+}
+
+.landscape-title .word {
+    position: relative;
+    display: inline-block;
+    color: var(--color-highlight);
+    font-style: italic;
+}
+
+.landscape-copy {
+    max-width: 600px;
+    margin: 45px auto 0;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.landscape-words {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin-top: 55px;
+}
+
+.landscape-words span {
+    color: rgba(255, 255, 255, 0.3);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.landscape-orbit {
+    position: absolute;
+    width: min(70vw, 900px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 235, 184, 0.09);
+    border-radius: 50%;
+}
+
+.landscape-orbit::before,
+.landscape-orbit::after {
+    content: "";
+    position: absolute;
+    inset: 15%;
+    border: 1px solid rgba(255, 235, 184, 0.06);
+    border-radius: 50%;
+}
+
+.landscape-orbit::after {
+    inset: 30%;
+}
+
+/* =========================================================
+   03 — FINANCIAL WORLD
+   ========================================================= */
+
+.financial-world {
+    position: relative;
+    min-height: auto;
+    padding: 100px 0 110px;
+    overflow: hidden;
+    background: var(--color-paper);
+}
+
+.world-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.world-header h2 {
+    max-width: 700px;
+    margin-top: 20px;
+    font-size: clamp(50px, 7vw, 100px);
+    color: var(--color-primary);
+}
+
+.world-header p {
+    max-width: 350px;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.world-map {
+    position: relative;
+    width: min(620px, 85vw);
+    aspect-ratio: 1;
+    margin: 60px auto 0;
+}
+
+.world-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-highlight);
+    text-align: center;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 12px 35px rgba(96, 29, 73, 0.2);
+    z-index: 3;
+}
+
+.world-core span {
+    max-width: 105px;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.world-ring {
+    position: absolute;
+    inset: 8%;
+    border: 2px solid rgba(96, 29, 73, 0.35);
+    border-radius: 50%;
+}
+
+.world-ring:nth-child(2) {
+    inset: 25%;
+    border: 2px dashed rgba(96, 29, 73, 0.4);
+}
+
+.world-node {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgba(96, 29, 73, 0.3);
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--color-primary);
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(96, 29, 73, 0.14);
+    transition: transform 0.4s var(--ease-soft), background 0.4s var(--ease-soft), box-shadow 0.4s var(--ease-soft);
+    backdrop-filter: blur(8px);
+    z-index: 4;
+}
+
+.world-node:hover {
+    background: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 32px rgba(96, 29, 73, 0.22);
+    transform: scale(1.1) !important;
+}
+
+.world-node span {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    padding: 0 6px;
+    line-height: 1.2;
+}
+
+.node-income {
+    top: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.node-investments {
+    top: 22%;
+    right: -4%;
+}
+
+.node-business {
+    bottom: 2%;
+    right: 8%;
+}
+
+.node-assets {
+    bottom: 2%;
+    left: 8%;
+}
+
+.node-compliance {
+    top: 22%;
+    left: -4%;
+}
+
+/* =========================================================
+   04 — PROBLEMS
+   ========================================================= */
+
+.problem-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--color-highlight);
+}
+
+.problem-stage {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 100px var(--gutter);
+}
+
+.problem-content {
+    width: min(1200px, 100%);
+}
+
+.problem-label {
+    color: var(--color-secondary);
+}
+
+.problem-number {
+    margin-bottom: 24px;
+    color: var(--color-secondary);
+    font-family: var(--font-mono);
+    font-size: 11px;
+}
+
+.problem-title {
+    max-width: 1100px;
+    color: var(--color-primary);
+    font-size: clamp(55px, 8vw, 130px);
+}
+
+.problem-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 70px;
+}
+
+.problem-bottom p {
+    max-width: 450px;
+    color: rgba(96, 29, 73, 0.65);
+    line-height: 1.7;
+}
+
+.problem-solution {
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   05 — SERVICES INDEX
+   ========================================================= */
+
+.services-index {
+    position: relative;
+    padding: 150px 0;
+    background: var(--color-paper);
+}
+
+.services-index-header {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.services-index-header h2 {
+    max-width: 800px;
+    color: var(--color-primary);
+    font-size: clamp(54px, 7vw, 105px);
+}
+
+.service-list {
+    border-top: 1px solid var(--color-line);
+}
+
+.service-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px 1fr 260px;
+    align-items: center;
+    gap: 30px;
+    min-height: 125px;
+    border-bottom: 1px solid var(--color-line);
+    overflow: hidden;
+}
+
+.service-number {
+    position: relative;
+    z-index: 2;
+    color: var(--color-secondary);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    transition: color 0.4s ease;
+}
+
+.service-name {
+    position: relative;
+    z-index: 2;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3vw, 48px);
+    transition: transform 0.6s var(--ease-premium), color 0.4s ease;
+}
+
+.service-description {
+    position: relative;
+    z-index: 2;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.6;
+    transition: color 0.4s ease, font-weight 0.3s ease;
+}
+
+.service-preview {
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    z-index: 1;
+    width: 220px;
+    height: 280px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.75) rotate(5deg);
+    pointer-events: none;
+}
+
+.service-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-item:hover .service-name {
+    transform: translateX(25px);
+    color: #000000;
+}
+
+.service-item:hover .service-description {
+    color: #000000;
+    font-weight: 600;
+}
+
+.service-item:hover .service-number {
+    color: #000000;
+    font-weight: 700;
+}
+
+.service-item:hover .service-preview {
+    opacity: 1;
+    transform: translateY(-50%) scale(1) rotate(0);
+    transition:
+        opacity 0.4s ease,
+        transform 0.7s var(--ease-soft);
+}
+
+/* =========================================================
+   06 — ADVISORY ROOM
+   ========================================================= */
+
+.advisory-room {
+    position: relative;
+    min-height: 100vh;
+    padding: 130px 0;
+    background: var(--color-soft);
+}
+
+.advisory-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    min-height: 720px;
+}
+
+.advisory-image {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+}
+
+.advisory-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.advisory-mask {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.advisory-mask span {
+    background: var(--color-primary);
+}
+
+.advisory-copy {
+    position: relative;
+    z-index: 4;
+    margin-left: -100px;
+    padding: 55px;
+    background: var(--color-paper);
+}
+
+.advisory-copy h2 {
+    margin-top: 20px;
+    color: var(--color-primary);
+    font-size: clamp(48px, 5vw, 80px);
+}
+
+.advisory-copy p {
+    max-width: 420px;
+    margin-top: 25px;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.advisory-steps {
+    display: grid;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.advisory-step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--color-line);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: 10px;
+}
+
+.advisory-step span {
+    color: var(--color-secondary);
+}
+
+/* =========================================================
+   07 — COST OF WAITING
+   ========================================================= */
+
+.cost-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.cost-background {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(189, 85, 121, 0.28),
+            transparent 35%
+        );
+}
+
+.cost-inner {
+    position: relative;
+    z-index: 2;
+    width: min(1200px, calc(100% - (var(--gutter) * 2)));
+    margin: auto;
+    padding: 140px 0;
+}
+
+.cost-header h2 {
+    max-width: 900px;
+    margin-top: 20px;
+    font-size: clamp(55px, 8vw, 120px);
+}
+
+.cost-timeline {
+    position: relative;
+    display: grid;
+    gap: 0;
+    margin-top: 100px;
+}
+
+.cost-line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cost-progress {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 1px;
+    height: 0;
+    background: var(--color-highlight);
+}
+
+.cost-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 30px;
+    min-height: 180px;
+}
+
+.cost-dot {
+    position: relative;
+    z-index: 2;
+    width: 11px;
+    height: 11px;
+    margin-top: 7px;
+    border: 1px solid var(--color-highlight);
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.cost-item h3 {
+    color: var(--color-highlight);
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4vw, 60px);
+    font-weight: 500;
+}
+
+.cost-item p {
+    max-width: 500px;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+}
+
+/* =========================================================
+   08 — METHOD
+   ========================================================= */
+
+.method-section {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-paper);
+}
+
+.method-canvas {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 120px var(--gutter);
+}
+
+.method-intro {
+    width: 50vw;
+    max-width: 700px;
+    margin-right: 10vw;
+}
+
+.method-intro h2 {
+    margin-top: 20px;
+    color: var(--color-primary);
+    font-size: clamp(55px, 8vw, 120px);
+}
+
+.method-stage {
+    position: relative;
+    width: 430px;
+    min-height: 480px;
+    margin-right: 18vw;
+    padding: 45px;
+    border: 1px solid var(--color-line);
+    background: var(--color-white);
+}
+
+.method-stage:nth-child(even) {
+    transform: translateY(100px);
+}
+
+.method-stage-number {
+    color: var(--color-secondary);
+    font-family: var(--font-mono);
+    font-size: 11px;
+}
+
+.method-stage h3 {
+    margin-top: 80px;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.method-stage p {
+    margin-top: 30px;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+/* =========================================================
+   09 — STATISTICS
+   ========================================================= */
+
+.stats-section {
+    min-height: 100vh;
+    padding: 140px 0 120px;
+    display: flex;
+    align-items: center;
+    background: var(--color-highlight);
+    box-sizing: border-box;
+}
+
+.stats-inner {
+    width: min(1300px, calc(100% - (var(--gutter) * 2)));
+    margin: auto;
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.stats-header h2 {
+    max-width: 750px;
+    margin-top: 20px;
+    color: var(--color-primary);
+    font-size: clamp(55px, 8vw, 115px);
+}
+
+.stats-header p {
+    max-width: 320px;
+    color: rgba(96, 29, 73, 0.6);
+    line-height: 1.6;
+}
+
+.stats-display {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.stat-number {
+    display: flex;
+    overflow: visible;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: clamp(80px, 14vw, 210px);
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+}
+
+.stat-number-digit {
+    display: inline-block;
+}
+
+.stat-label {
+    margin-top: 25px;
+    color: var(--color-secondary);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.stats-side {
+    display: grid;
+    gap: 24px;
+    padding-bottom: 6px;
+}
+
+.stats-side-item {
+    padding-top: 18px;
+    border-top: 1px solid rgba(96, 29, 73, 0.2);
+}
+
+.stats-side-item strong {
+    display: block;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.stats-side-item span {
+    display: block;
+    margin-top: 7px;
+    color: rgba(96, 29, 73, 0.65);
+}
+
+/* =========================================================
+   10 — CLIENT STORIES
+   ========================================================= */
+
+.stories-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 140px 0 160px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--color-paper);
+    box-sizing: border-box;
+}
+
+.stories-inner {
+    display: grid;
+    grid-template-columns: 1fr 0.65fr;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 30px;
+}
+
+.story-quote {
+    max-width: 900px;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6.5vw, 100px);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+}
+
+.story-details {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 450px;
+}
+
+.story-detail {
+    padding-bottom: 15px;
+}
+
+.story-detail span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-secondary);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+}
+
+.story-detail strong {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.story-image {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.story-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 60%,
+        rgba(96, 29, 73, 0.3)
+    );
+}
+
+/* =========================================================
+   11 — TAX INTELLIGENCE
+   ========================================================= */
+
+.intelligence-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 140px 0;
+    overflow: hidden;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.intelligence-header {
+    max-width: 900px;
+}
+
+.intelligence-header h2 {
+    margin-top: 20px;
+    font-size: clamp(55px, 8vw, 120px);
+}
+
+.intelligence-list {
+    margin-top: 90px;
+    border-top: 1px solid var(--color-dark-line);
+}
+
+.insight-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 120px;
+    border-bottom: 1px solid var(--color-dark-line);
+    overflow: hidden;
+}
+
+.insight-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.insight-number {
+    color: var(--color-soft);
+    font-family: var(--font-mono);
+    font-size: 10px;
+}
+
+.insight-title {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-display);
+    font-size: clamp(30px, 4vw, 58px);
+    font-weight: 500;
+}
+
+.insight-arrow {
+    font-size: 20px;
+    transition: transform 0.5s var(--ease-soft);
+}
+
+.insight-item:hover .insight-arrow {
+    transform: translate(8px, -8px);
+}
+
+.insight-preview {
+    position: fixed;
+    z-index: 20;
+    width: 240px;
+    height: 300px;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.65);
+}
+
+.insight-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   12 — FAQ
+   ========================================================= */
+
+.faq-section {
+    min-height: 100vh;
+    padding: 150px 0;
+    background: var(--color-paper);
+}
+
+.faq-layout {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 100px;
+}
+
+.faq-title {
+    color: var(--color-primary);
+    font-size: clamp(55px, 7vw, 105px);
+}
+
+.faq-intro {
+    max-width: 340px;
+    margin-top: 30px;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.faq-list {
+    border-top: 1px solid var(--color-line);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-line);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 0;
+    background: transparent;
+    color: var(--color-primary);
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: clamp(23px, 2.4vw, 35px);
+}
+
+.faq-icon {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    font-family: var(--font-body);
+    transition: transform 0.4s var(--ease-soft);
+}
+
+.faq-answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.45s var(--ease-soft);
+}
+
+.faq-answer-inner {
+    max-width: 650px;
+    padding: 0 50px 30px 0;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    height: auto;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    background: var(--color-primary);
+    color: var(--color-highlight);
+}
+
+/* =========================================================
+   13 — TAX DESK
+   ========================================================= */
+
+.tax-desk {
+    position: relative;
+    min-height: 85vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: var(--color-primary);
+}
+
+.tax-desk-inner {
+    position: relative;
+    z-index: 4;
+    width: min(900px, calc(100% - (var(--gutter) * 2)));
+    text-align: center;
+}
+
+.tax-desk h2 {
+    color: var(--color-highlight);
+    font-size: clamp(60px, 9vw, 140px);
+}
+
+.tax-desk p {
+    max-width: 550px;
+    margin: 35px auto 0;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.7;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 580px;
+    margin: 45px auto 0;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-pill);
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 0 20px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--color-white);
+}
+
+.newsletter-form input:-webkit-autofill,
+.newsletter-form input:-webkit-autofill:hover,
+.newsletter-form input:-webkit-autofill:focus,
+.newsletter-form input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0 1000px #601d49 inset !important;
+    box-shadow: 0 0 0 1000px #601d49 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+    border-radius: var(--radius-pill);
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.tax-tag {
+    position: absolute;
+    z-index: 2;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 235, 184, 0.22);
+    color: var(--color-highlight);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.tax-tag-1 {
+    top: 18%;
+    left: 10%;
+}
+
+.tax-tag-2 {
+    top: 30%;
+    right: 12%;
+}
+
+.tax-tag-3 {
+    bottom: 18%;
+    left: 17%;
+}
+
+.tax-tag-4 {
+    bottom: 25%;
+    right: 9%;
+}
+
+/* =========================================================
+   14 — FINAL CTA
+   ========================================================= */
+
+.final-cta {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #190D15;
+    color: var(--color-white);
+}
+
+.final-cta-image {
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+}
+
+.final-cta-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.12);
+}
+
+.final-cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 13, 21, 0.72);
+}
+
+.final-cta-inner {
+    position: relative;
+    z-index: 3;
+    width: min(1200px, calc(100% - (var(--gutter) * 2)));
+}
+
+.final-cta-line {
+    width: 0;
+    height: 1px;
+    margin-bottom: 40px;
+    background: var(--color-highlight);
+}
+
+.final-cta h2 {
+    max-width: 1100px;
+    color: var(--color-white);
+    font-size: clamp(65px, 10vw, 155px);
+}
+
+.final-cta h2 em {
+    color: var(--color-highlight);
+    font-style: italic;
+}
+
+.final-cta-copy {
+    max-width: 480px;
+    margin-top: 35px;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.7;
+}
+
+.final-cta-actions {
+    margin-top: 40px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero-image-stage {
+        height: 60vh;
+        min-height: 480px;
+    }
+
+    .hero-floating-note {
+        left: 15px;
+    }
+
+    .world-header,
+    .stats-header {
+        display: block;
+    }
+
+    .world-header p,
+    .stats-header p {
+        margin-top: 25px;
+    }
+
+    .advisory-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .advisory-copy {
+        margin: -80px 30px 0;
+    }
+
+    .services-index-header,
+    .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-item {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .service-description {
+        display: none;
+    }
+
+    .stories-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image {
+        height: 500px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* HERO */
+    .hero {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    .hero-inner {
+        padding-top: 105px;
+        gap: 42px;
+    }
+
+    .hero-title {
+        font-size: clamp(44px, 12vw, 68px);
+        line-height: 1.05;
+    }
+
+    .hero-description {
+        margin-top: 24px;
+        font-size: 14px;
+    }
+
+    .hero-actions {
+        margin-top: 28px;
+    }
+
+    .hero-meta {
+        margin-top: 30px;
+    }
+
+    .hero-image-stage {
+        height: 55vh;
+        min-height: 360px;
+    }
+
+    .hero-image-frame {
+        border-radius: 0 0 0 30%;
+    }
+
+    .hero-floating-note {
+        left: 10px;
+        bottom: 8%;
+        font-size: 8px;
+    }
+
+    .hero-progress {
+        right: 20px;
+        bottom: 18px;
+    }
+
+    /* TAX LANDSCAPE */
+    .tax-landscape {
+        min-height: 80vh;
+    }
+
+    .landscape-title {
+        font-size: clamp(48px, 14vw, 72px);
+    }
+
+    .landscape-copy {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    .landscape-orbit {
+        width: 90vw;
+    }
+
+    /* FINANCIAL WORLD */
+    .financial-world {
+        min-height: auto;
+        padding: 90px 0;
+    }
+
+    .world-header h2 {
+        font-size: clamp(48px, 14vw, 70px);
+    }
+
+    .world-map {
+        width: 100%;
+        aspect-ratio: auto;
+        display: grid;
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    .world-core,
+    .world-ring {
+        display: none;
+    }
+
+    .world-node {
+        position: relative;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: 100%;
+        height: 78px;
+        border-radius: 0;
+        transform: none !important;
+    }
+
+    /* PROBLEMS */
+    .problem-stage {
+        min-height: 75vh;
+    }
+
+    .problem-title {
+        font-size: clamp(48px, 13vw, 70px);
+    }
+
+    .problem-bottom {
+        display: block;
+        margin-top: 40px;
+    }
+
+    .problem-solution {
+        margin-top: 25px;
+    }
+
+    /* SERVICES */
+    .services-index {
+        padding: 90px 0;
+    }
+
+    .services-index-header h2 {
+        font-size: clamp(48px, 13vw, 72px);
+    }
+
+    .service-item {
+        min-height: 100px;
+        grid-template-columns: 45px 1fr;
+    }
+
+    .service-name {
+        font-size: 28px;
+    }
+
+    .service-preview {
+        display: none;
+    }
+
+    /* ADVISORY */
+    .advisory-room {
+        padding: 80px 0;
+    }
+
+    .advisory-layout {
+        min-height: auto;
+    }
+
+    .advisory-image {
+        height: 430px;
+    }
+
+    .advisory-copy {
+        margin: -40px 15px 0;
+        padding: 30px;
+    }
+
+    .advisory-copy h2 {
+        font-size: 48px;
+    }
+
+    .advisory-mask {
+        display: none;
+    }
+
+    /* COST */
+    .cost-inner {
+        padding: 90px 0;
+    }
+
+    .cost-header h2 {
+        font-size: clamp(48px, 13vw, 72px);
+    }
+
+    .cost-timeline {
+        margin-top: 65px;
+    }
+
+    .cost-item {
+        grid-template-columns: 45px 1fr;
+        min-height: 160px;
+        gap: 15px;
+    }
+
+    .cost-item h3 {
+        font-size: 30px;
+    }
+
+    /* METHOD */
+    .method-canvas {
+        width: 100%;
+        display: block;
+        padding: 90px var(--gutter);
+    }
+
+    .method-intro {
+        width: auto;
+        margin: 0 0 55px;
+    }
+
+    .method-intro h2 {
+        font-size: clamp(48px, 13vw, 72px);
+    }
+
+    .method-stage,
+    .method-stage:nth-child(even) {
+        width: 100%;
+        min-height: 300px;
+        margin: 0 0 15px;
+        transform: none;
+    }
+
+    .method-stage h3 {
+        margin-top: 45px;
+        font-size: 52px;
+    }
+
+    /* STATS */
+    .stats-section {
+        min-height: auto;
+        padding: 100px 0;
+    }
+
+    .stats-display {
+        display: block;
+        margin-top: 70px;
+    }
+
+    .stat-number {
+        font-size: 29vw;
+    }
+
+    .stats-side {
+        margin-top: 60px;
+    }
+
+    /* STORIES */
+    .stories-section {
+        padding: 100px 0;
+    }
+
+    .story-quote {
+        font-size: clamp(44px, 12vw, 68px);
+    }
+
+    .story-image {
+        height: 420px;
+    }
+
+    /* INTELLIGENCE */
+    .intelligence-section {
+        padding: 90px 0;
+    }
+
+    .intelligence-header h2 {
+        font-size: clamp(48px, 13vw, 72px);
+    }
+
+    .insight-item {
+        min-height: 95px;
+    }
+
+    .insight-left {
+        gap: 16px;
+    }
+
+    .insight-title {
+        font-size: 28px;
+    }
+
+    .insight-preview {
+        display: none;
+    }
+
+    /* FAQ */
+    .faq-section {
+        padding: 90px 0;
+    }
+
+    .faq-title {
+        font-size: clamp(48px, 13vw, 72px);
+    }
+
+    .faq-question {
+        min-height: 85px;
+        font-size: 22px;
+    }
+
+    .faq-answer-inner {
+        padding-right: 20px;
+    }
+
+    /* TAX DESK */
+    .tax-desk {
+        min-height: 75vh;
+    }
+
+    .tax-desk h2 {
+        font-size: clamp(55px, 15vw, 80px);
+    }
+
+    .newsletter-form {
+        display: block;
+        padding: 8px;
+        border-radius: 18px;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    .newsletter-form .btn {
+        width: 100%;
+    }
+
+    .tax-tag {
+        display: none;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+        min-height: 80svh;
+    }
+
+    .final-cta h2 {
+        font-size: clamp(58px, 15vw, 85px);
+    }
+}

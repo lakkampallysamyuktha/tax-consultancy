@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Login — Stackly</title>
+
+  <meta
+    name="description"
+    content="Login to your Stackly account."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link rel="stylesheet" href="../global.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       PAGE
+  ====================================================== -->
+
+  <main class="auth-page">
+
+    <!-- Decorative background -->
+    <div class="background-shape background-shape-one"></div>
+    <div class="background-shape background-shape-two"></div>
+
+    <!-- ===================================================
+         LEFT BRAND PANEL
+    ==================================================== -->
+
+    <section class="auth-brand">
+
+
+
+
+      <div class="brand-content">
+
+        <span class="brand-eyebrow">
+          TAX • BUSINESS • WEALTH
+        </span>
+
+        <h1>
+          YOUR
+          <em>NUMBERS.</em>
+          YOUR
+          NEXT MOVE.
+        </h1>
+
+        <p>
+          Access your Stackly account and continue
+          managing the financial decisions that matter.
+        </p>
+
+      </div>
+
+
+      <div class="brand-footer">
+
+        <span>
+          SALEM, TAMIL NADU
+        </span>
+
+        <span>
+          INDIA
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         RIGHT LOGIN PANEL
+    ==================================================== -->
+
+    <section class="auth-panel">
+
+      <div class="auth-container">
+
+        <div class="auth-top">
+
+          <a href="../index.html" class="back-home-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Back to Home</span>
+          </a>
+
+          <a href="../index.html" class="auth-logo" aria-label="Tax Consultancy Home">
+            <img src="../logo.webp" alt="Tax Consultancy Logo" class="auth-logo-img">
+          </a>
+
+          <span class="auth-question">
+            New here?
+            <a href="signup.html">
+              Create account
+            </a>
+          </span>
+
+        </div>
+
+
+        <!-- Heading -->
+
+        <div class="auth-heading">
+
+          <span class="auth-eyebrow">
+            WELCOME BACK
+          </span>
+
+          <h2>
+            HELLO
+            <em>AGAIN.</em>
+          </h2>
+
+          <p>
+            Enter your details to continue.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             LOGIN FORM
+        ================================================== -->
+
+        <form
+          id="loginForm"
+          class="auth-form"
+          novalidate
+        >
+
+          <!-- EMAIL -->
+
+          <div class="form-field">
+
+            <label for="loginEmail">
+              EMAIL ADDRESS
+            </label>
+
+            <div class="input-wrapper">
+
+              <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                placeholder="Saraah@gmail.com"
+                autocomplete="username"
+                autocapitalize="none"
+                spellcheck="false"
+                required
+              />
+
+            </div>
+
+            <span
+              class="field-error"
+              id="emailError"
+            ></span>
+
+          </div>
+
+
+          <!-- PASSWORD -->
+
+          <div class="form-field">
+
+            <div class="label-row">
+
+              <label for="loginPassword">
+                PASSWORD
+              </label>
+
+              <a
+                href="../404.html"
+                class="forgot-link"
+              >
+                Forgot password?
+              </a>
+
+            </div>
+
+
+            <div class="input-wrapper password-wrapper">
+
+              <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="passwordToggle"
+                aria-label="Show password"
+              >
+                <svg
+                  class="eye-icon eye-open"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                  />
+                </svg>
+
+                <svg
+                  class="eye-icon eye-closed"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 3l18 18"
+                  />
+                  <path
+                    d="M10.6 6.2A9.9 9.9 0 0 1 12 6c6.5 0 10 6 10 6a18 18 0 0 1-3.2 3.7"
+                  />
+                  <path
+                    d="M6.2 6.2C3.5 8 2 12 2 12s3.5 6 10 6c1.4 0 2.6-.3 3.7-.8"
+                  />
+                  <path
+                    d="M9.9 9.9a3 3 0 0 0 4.2 4.2"
+                  />
+                </svg>
+              </button>
+
+            </div>
+
+            <span
+              class="field-error"
+              id="passwordError"
+            ></span>
+
+          </div>
+
+
+
+
+
+          <!-- ROLE -->
+
+          <div class="form-field">
+
+            <label>
+              LOGIN AS
+            </label>
+
+
+            <div
+              class="custom-select"
+              id="roleSelect"
+            >
+
+              <button
+                type="button"
+                class="custom-select-trigger"
+                id="roleTrigger"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+              >
+
+                <span
+                  id="selectedRole"
+                  class="selected-placeholder"
+                >
+                  Select your role
+                </span>
+
+                <span class="select-arrow">
+                  <i class='fa-solid fa-arrow-down'></i>
+                </span>
+
+              </button>
+
+
+              <div
+                class="custom-select-menu"
+                id="roleMenu"
+                role="listbox"
+              >
+
+                <div
+                  class="role-option"
+                  data-value="user"
+                  role="option"
+                  tabindex="0"
+                >
+                  <span class="role-number">
+                    01
+                  </span>
+
+                  <span class="role-name">
+                    User
+                  </span>
+
+                  <span class="role-description">
+                    Personal account
+                  </span>
+                </div>
+
+
+                <div
+                  class="role-option"
+                  data-value="admin"
+                  role="option"
+                  tabindex="0"
+                >
+                  <span class="role-number">
+                    02
+                  </span>
+
+                  <span class="role-name">
+                    Admin
+                  </span>
+
+                  <span class="role-description">
+                    Administration
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <input
+              type="hidden"
+              id="selectedRoleValue"
+              name="role"
+            />
+
+            <span
+              class="field-error"
+              id="roleError"
+            ></span>
+
+          </div>
+
+                    <!-- REMEMBER ME -->
+
+          <div class="remember-field">
+
+            <label class="remember-label" for="rememberMe">
+
+              <input
+                type="checkbox"
+                id="rememberMe"
+                name="remember"
+                class="remember-checkbox"
+              />
+
+              <span class="custom-checkbox" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="check-icon">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+
+              <span class="remember-text">Remember me</span>
+
+            </label>
+
+          </div>
+
+
+          <!-- LOGIN BUTTON -->
+
+          <button
+            type="submit"
+            class="login-button"
+            id="loginButton"
+          >
+
+            <span>
+              Login
+            </span>
+
+            <strong>
+              <i class='fa-solid fa-arrow-up-right-from-square'></i>
+            </strong>
+
+          </button>
+
+
+          <!-- FORM MESSAGE -->
+
+          <div
+            class="form-message"
+            id="formMessage"
+            aria-live="polite"
+          ></div>
+
+        </form>
+
+
+        <!-- =================================================
+             SOCIAL LOGIN
+        ================================================== -->
+
+        <div class="social-section">
+
+          <div class="social-divider">
+            <span></span>
+            <p>OR CONTINUE WITH</p>
+            <span></span>
+          </div>
+
+
+          <div class="social-buttons">
+
+            <a
+              href="../404.html"
+              class="social-button"
+            >
+
+              <span class="social-icon google-icon">
+                G
+              </span>
+
+              <span>
+                Google
+              </span>
+
+              <strong>
+                <i class='fa-solid fa-arrow-up-right-from-square'></i>
+              </strong>
+
+            </a>
+
+
+            <a
+              href="../404.html"
+              class="social-button"
+            >
+
+              <span class="social-icon linkedin-icon">
+                in
+              </span>
+
+              <span>
+                LinkedIn
+              </span>
+
+              <strong>
+                <i class='fa-solid fa-arrow-up-right-from-square'></i>
+              </strong>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- SIGNUP -->
+
+        <div class="signup-prompt">
+
+          <span>
+            DON'T HAVE AN ACCOUNT?
+          </span>
+
+          <a href="signup.html">
+            CREATE ACCOUNT
+            <strong><i class='fa-solid fa-arrow-up-right-from-square'></i></strong>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       GSAP
+  ====================================================== -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+    ====================================================== */
+
+    const loginForm =
+      document.getElementById("loginForm");
+
+    const emailInput =
+      document.getElementById("loginEmail");
+
+    const passwordInput =
+      document.getElementById("loginPassword");
+
+    const passwordToggle =
+      document.getElementById("passwordToggle");
+
+    const roleSelect =
+      document.getElementById("roleSelect");
+
+    const roleTrigger =
+      document.getElementById("roleTrigger");
+
+    const roleMenu =
+      document.getElementById("roleMenu");
+
+    const selectedRole =
+      document.getElementById("selectedRole");
+
+    const selectedRoleValue =
+      document.getElementById("selectedRoleValue");
+
+    const formMessage =
+      document.getElementById("formMessage");
+
+    const loginButton =
+      document.getElementById("loginButton");
+
+
+    /* =====================================================
+       PASSWORD TOGGLE
+    ====================================================== */
+
+    passwordToggle.addEventListener("click", () => {
+
+      const isPassword =
+        passwordInput.type === "password";
+
+      passwordInput.type =
+        isPassword ? "text" : "password";
+
+      passwordToggle.classList.toggle(
+        "is-visible",
+        isPassword
+      );
+
+      passwordToggle.setAttribute(
+        "aria-label",
+        isPassword
+          ? "Hide password"
+          : "Show password"
+      );
+
+    });
+
+
+    /* =====================================================
+       CUSTOM ROLE DROPDOWN
+    ====================================================== */
+
+    function toggleRoleMenu() {
+
+      const isOpen =
+        roleSelect.classList.contains("open");
+
+      if (isOpen) {
+
+        closeRoleMenu();
+
+      } else {
+
+        openRoleMenu();
+
+      }
+
+    }
+
+
+    function openRoleMenu() {
+
+      roleSelect.classList.add("open");
+      const parentField = roleSelect.closest(".form-field");
+      if (parentField) parentField.classList.add("is-open");
+
+      roleTrigger.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+    }
+
+
+    function closeRoleMenu() {
+
+      roleSelect.classList.remove("open");
+      const parentField = roleSelect.closest(".form-field");
+      if (parentField) parentField.classList.remove("is-open");
+
+      roleTrigger.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+
+    roleTrigger.addEventListener(
+      "click",
+      toggleRoleMenu
+    );
+
+
+    document.querySelectorAll(
+      ".role-option"
+    ).forEach(option => {
+
+      option.addEventListener(
+        "click",
+        () => {
+
+          const value =
+            option.dataset.value;
+
+          const name =
+            option.querySelector(
+              ".role-name"
+            ).textContent.trim();
+
+          selectedRole.textContent =
+            name;
+
+          selectedRole.classList.remove(
+            "selected-placeholder"
+          );
+
+          selectedRole.classList.add(
+            "selected-value"
+          );
+
+          selectedRoleValue.value =
+            value;
+
+          document.querySelectorAll(
+            ".role-option"
+          ).forEach(item => {
+            item.classList.remove(
+              "selected"
+            );
+          });
+
+          option.classList.add(
+            "selected"
+          );
+
+          closeRoleMenu();
+
+          clearError(
+            document.getElementById(
+              "roleError"
+            )
+          );
+
+        }
+      );
+
+
+      option.addEventListener(
+        "keydown",
+        event => {
+
+          if (
+            event.key === "Enter" ||
+            event.key === " "
+          ) {
+
+            event.preventDefault();
+
+            option.click();
+
+          }
+
+        }
+      );
+
+    });
+
+
+    /* Close dropdown outside */
+
+    document.addEventListener(
+      "click",
+      event => {
+
+        if (
+          !roleSelect.contains(event.target)
+        ) {
+
+          closeRoleMenu();
+
+        }
+
+      }
+    );
+
+
+    /* =====================================================
+       VALIDATION
+    ====================================================== */
+
+    function showError(
+      element,
+      message
+    ) {
+
+      element.textContent =
+        message;
+
+      element.classList.add("show");
+
+    }
+
+
+    function clearError(element) {
+
+      element.textContent = "";
+
+      element.classList.remove("show");
+
+    }
+
+
+    function validateEmail(email) {
+
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        .test(email);
+
+    }
+
+
+    function validateForm() {
+
+      let valid = true;
+
+      const emailError =
+        document.getElementById(
+          "emailError"
+        );
+
+      const passwordError =
+        document.getElementById(
+          "passwordError"
+        );
+
+      const roleError =
+        document.getElementById(
+          "roleError"
+        );
+
+
+      clearError(emailError);
+      clearError(passwordError);
+      clearError(roleError);
+
+
+      /* Email */
+
+      if (!emailInput.value.trim()) {
+
+        showError(
+          emailError,
+          "Please enter your email address."
+        );
+
+        valid = false;
+
+      } else if (
+        !validateEmail(
+          emailInput.value.trim()
+        )
+      ) {
+
+        showError(
+          emailError,
+          "Please enter a valid email address."
+        );
+
+        valid = false;
+
+      }
+
+
+      /* Password */
+
+      if (!passwordInput.value) {
+
+        showError(
+          passwordError,
+          "Please enter your password."
+        );
+
+        valid = false;
+
+      } else if (
+        passwordInput.value.length < 6
+      ) {
+
+        showError(
+          passwordError,
+          "Password must contain at least 6 characters."
+        );
+
+        valid = false;
+
+      }
+
+
+      /* Role */
+
+      if (!selectedRoleValue.value) {
+
+        showError(
+          roleError,
+          "Please select a role."
+        );
+
+        valid = false;
+
+      }
+
+
+      return valid;
+
+    }
+
+
+    /* =====================================================
+       LOGIN
+    ====================================================== */
+
+    loginForm.addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+
+        if (!validateForm()) {
+
+          gsap.fromTo(
+            ".auth-form",
+            {
+              x: -5
+            },
+            {
+              x: 5,
+              duration: 0.06,
+              repeat: 5,
+              yoyo: true,
+              clearProps: "x"
+            }
+          );
+
+          return;
+
+        }
+
+
+        const email =
+          emailInput.value.trim();
+
+        const role =
+          selectedRoleValue.value;
+
+
+        /*
+          Extract username.
+
+          Saraah@gmail.com
+                    <i class='fa-solid fa-arrow-down'></i>
+          Saraah
+        */
+
+        const username =
+          email
+            .split("@")[0]
+            .trim();
+
+
+        /*
+          Store information so the dashboard
+          can display:
+
+          Hello Saraah
+
+          and use the email for mail-to.
+        */
+
+        localStorage.setItem(
+          "stacklyUserEmail",
+          email
+        );
+
+        localStorage.setItem(
+          "stacklyUsername",
+          username
+        );
+
+        localStorage.setItem(
+          "stacklyUserRole",
+          role
+        );
+
+
+        /* Button animation */
+
+        loginButton.classList.add(
+          "loading"
+        );
+
+        loginButton.querySelector(
+          "span"
+        ).textContent = "Signing in...";
+
+
+          setTimeout(() => {
+            const target = (role === "admin") ? "admin.html" : "user.html";
+            resetFormState();
+            window.location.href = target;
+          }, 700);
+
+        }
+      );
+
+
+    /* =====================================================
+       RESET FORM ON BACK / LOAD
+    ====================================================== */
+
+    function resetFormState() {
+      if (loginForm) {
+        loginForm.reset();
+      }
+
+      if (emailInput) emailInput.value = "";
+      if (passwordInput) passwordInput.value = "";
+
+      const rememberMe = document.getElementById("rememberMe");
+      if (rememberMe) rememberMe.checked = false;
+
+      if (selectedRoleValue) selectedRoleValue.value = "";
+      if (selectedRole) {
+        selectedRole.textContent = "Select your role";
+        selectedRole.classList.remove("selected-value");
+        selectedRole.classList.add("selected-placeholder");
+      }
+
+      if (roleSelect) {
+        roleSelect.classList.remove("open");
+        const parentField = roleSelect.closest(".form-field");
+        if (parentField) parentField.classList.remove("is-open");
+      }
+
+      document.querySelectorAll(".role-option").forEach(item => {
+        item.classList.remove("selected");
+      });
+
+      document.querySelectorAll(".field-error").forEach(el => {
+        el.textContent = "";
+        el.classList.remove("show");
+      });
+
+      if (formMessage) {
+        formMessage.textContent = "";
+        formMessage.className = "form-message";
+      }
+
+      if (loginButton) {
+        loginButton.classList.remove("loading");
+        loginButton.disabled = false;
+        const span = loginButton.querySelector("span");
+        if (span) span.textContent = "Login";
+        const strong = loginButton.querySelector("strong");
+        if (strong) strong.innerHTML = "<i class='fa-solid fa-arrow-up-right-from-square'></i>";
+      }
+    }
+
+    window.addEventListener("pageshow", () => {
+      resetFormState();
+    });
+
+
+    /* =====================================================
+       INPUT ERROR CLEAR
+    ====================================================== */
+
+    emailInput.addEventListener(
+      "input",
+      () => {
+
+        clearError(
+          document.getElementById(
+            "emailError"
+          )
+        );
+
+      }
+    );
+
+
+    passwordInput.addEventListener(
+      "input",
+      () => {
+
+        clearError(
+          document.getElementById(
+            "passwordError"
+          )
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       GSAP PAGE ENTRANCE
+    ====================================================== */
+
+    const pageTimeline =
+      gsap.timeline({
+        defaults: {
+          ease: "power3.out"
+        }
+      });
+
+
+    pageTimeline
+      .from(".auth-brand", {
+        x: -80,
+        opacity: 0,
+        duration: 1.1
+      })
+      .from(
+        ".brand-logo",
+        {
+          y: -20,
+          opacity: 0,
+          duration: 0.7
+        },
+        "-=0.6"
+      )
+      .from(
+        ".brand-eyebrow",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.6
+        },
+        "-=0.4"
+      )
+      .from(
+        ".brand-content h1",
+        {
+          y: 70,
+          opacity: 0,
+          duration: 1
+        },
+        "-=0.4"
+      )
+      .from(
+        ".brand-content p",
+        {
+          y: 25,
+          opacity: 0,
+          duration: 0.7
+        },
+        "-=0.6"
+      )
+      .from(
+        ".auth-panel",
+        {
+          x: 70,
+          opacity: 0,
+          duration: 1
+        },
+        "-=0.8"
+      )
+      .from(
+        ".auth-top",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.5
+        },
+        "-=0.6"
+      )
+      .from(
+        ".auth-heading > *",
+        {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.1
+        },
+        "-=0.3"
+      )
+      .from(
+        ".form-field, .remember-field",
+        {
+          y: 25,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.08
+        },
+        "-=0.3"
+      )
+      .from(
+        ".login-button",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.6
+        },
+        "-=0.2"
+      )
+      .from(
+        ".social-section",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.6
+        },
+        "-=0.3"
+      );
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ====================================================== */
+
+    if (
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches
+    ) {
+
+      gsap.globalTimeline.clear();
+
+    }
+
+  </script>
+
+</body>
+</html>

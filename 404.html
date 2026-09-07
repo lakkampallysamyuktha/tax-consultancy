@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Tax Consultancy</title>
+  <meta name="description" content="The page you are looking for does not exist or has been moved." />
+
+  <!-- FontAwesome & CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="global.css" />
+
+  <style>
+    /* CSS Filter adjusted to map pure black logo.webp to primary brand color #601D49 */
+    img[src*="logo"] { 
+      filter: brightness(0) saturate(100%) invert(14%) sepia(54%) saturate(3015%) hue-rotate(293deg) brightness(85%) contrast(97%) !important; 
+    }
+
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--color-paper);
+      position: relative;
+      overflow: hidden;
+      padding: 40px 24px;
+    }
+
+    /* Ambient background graphics */
+    .error-bg-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(189, 85, 121, 0.15) 0%, rgba(96, 29, 73, 0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .error-header {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .error-logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.4s var(--ease-soft);
+    }
+
+    .error-logo-img:hover {
+      transform: scale(1.05);
+    }
+
+    .error-content {
+      position: relative;
+      z-index: 10;
+      max-width: 640px;
+      text-align: center;
+      margin: auto 0;
+    }
+
+    .error-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(96, 29, 73, 0.08);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-pill);
+      color: var(--color-primary);
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .error-number {
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 15vw, 11rem);
+      font-weight: 700;
+      line-height: 0.9;
+      color: var(--color-primary);
+      margin: 0 0 16px 0;
+      letter-spacing: -3px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .error-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      color: var(--color-ink);
+      margin: 0 0 16px 0;
+      font-weight: 600;
+    }
+
+    .error-description {
+      color: var(--color-muted);
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      line-height: 1.6;
+      margin: 0 0 36px 0;
+    }
+
+    .error-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+
+
+    .error-footer {
+      position: relative;
+      z-index: 10;
+      color: var(--color-muted);
+      font-size: 0.875rem;
+      font-family: var(--font-mono);
+    }
+
+    @media (max-width: 576px) {
+      .error-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn,
+      .btn-outline {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SITE HEADER -->
+
+
+  <!-- FULL-WIDTH RESPONSIVE MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="mobile-menu-logo" aria-label="Tax Consultancy Home">
+        <img src="logo.webp" alt="Tax Consultancy Logo" />
+      </a>
+      <button class="mobile-menu-close" id="menuClose" aria-label="Close mobile menu" type="button">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="html/about.html">About</a>
+      <a href="html/services.html">Services</a>
+      <a href="html/blog.html">Insights</a>
+      <a href="html/contact.html">Contact</a>
+      <a href="html/login.html" class="mobile-menu-cta">
+        <i class="fa-solid fa-user"></i> Login
+      </a>
+    </nav>
+
+    <div class="mobile-menu-footer">
+      TAX • ADVISORY • COMPLIANCE
+    </div>
+  </div>
+
+  <div class="error-page">
+    <div class="error-bg-glow"></div>
+
+    <!-- Header Logo -->
+    <header class="error-header">
+      <a href="index.html" aria-label="Tax Consultancy Home">
+        <img src="logo.webp" alt="Tax Consultancy Logo" class="error-logo-img" />
+      </a>
+    </header>
+
+    <!-- Error Content -->
+    <main class="error-content">
+      <div class="error-badge">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Tax Ledger Entry Missing
+      </div>
+      <h1 class="error-number">404</h1>
+      <h2 class="error-title">Route Unmapped or File Audited</h2>
+      <p class="error-description">
+        The financial record or page you are requesting could not be located in our ledger.
+        It may have been relocated, restructured, or never existed.
+      </p>
+
+      <div class="error-actions">
+        <!-- Button 1: Home -->
+        <a href="index.html" class="btn btn-primary">
+          <span><i class="fa-solid fa-house" style="margin-right: 8px;"></i> Home</span>
+        </a>
+
+        <!-- Button 2: Go Back -->
+        <button type="button" onclick="window.history.length > 1 ? window.history.back() : window.location.href='index.html'" class="btn btn-outline">
+          <span><i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> Go Back</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="error-footer">
+      <span>© 2026 STACKLY TAX CONSULTANCY. ALL RIGHTS RESERVED.</span>
+    </footer>
+  </div>
+
+  <!-- GSAP & Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Animated entrance with GSAP
+      const tl = gsap.timeline();
+
+      tl.from(".error-header", {
+        opacity: 0,
+        y: -30,
+        duration: 0.8,
+        ease: "power3.out"
+      })
+      .from(".error-badge", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.6,
+        ease: "back.out(1.7)"
+      }, "-=0.4")
+      .from(".error-number", {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        ease: "power3.out"
+      }, "-=0.3")
+      .from(".error-title", {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        ease: "power3.out"
+      }, "-=0.6")
+      .from(".error-description", {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        ease: "power3.out"
+      }, "-=0.6");
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById("menuToggle");
+      const menuClose = document.getElementById("menuClose");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.add("active");
+          document.body.style.overflow = "hidden";
+        });
+      }
+
+      if (menuClose && mobileMenu) {
+        menuClose.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+          document.body.style.overflow = "";
+        });
+      }
+
+      // Close menu on link click
+      if (mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+            document.body.style.overflow = "";
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
