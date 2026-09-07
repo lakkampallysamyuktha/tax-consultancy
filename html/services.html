@@ -1294,22 +1294,8 @@
 
 
     /* =========================================================
-       BACK TO TOP
+       BACK TO TOP (Removed because it was hijacking the Privacy Policy link)
     ========================================================== */
-
-    const backToTopBtn = document.querySelector(".footer-bottom a");
-    if (backToTopBtn) {
-      backToTopBtn.addEventListener(
-        "click",
-        event => {
-          event.preventDefault();
-          window.scrollTo({
-            top: 0,
-            behavior: reduceMotion ? "auto" : "smooth"
-          });
-        }
-      );
-    }
 
 
     /* =========================================================
